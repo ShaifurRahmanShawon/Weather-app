@@ -17,7 +17,7 @@
             <button><img src="Image/search.png" alt=""></button>
         </div>
         <div class="weather">
-            <img src="Image/rain.png" alt="weather-icon">
+            <img class="weather-icon" src="Image/rain.png" alt="weather-icon">
             <h1 class="temp">22°C</h1>
             <h2 class="city">dhaka</h2>
             <div class="details">
@@ -61,19 +61,19 @@
                 document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
                 
                 // Set weather icons based on conditions
-                // if (data.weather[0].main === "Clear") {
-                //     weatherIcon.src = "Image/clear.png";
-                // } else if (data.weather[0].main === "Clouds") {
-                //     weatherIcon.src = "Image/clouds.png";
-                // } else if (data.weather[0].main === "Drizzle") {
-                //     weatherIcon.src = "Image/drizzle.png";
-                // } else if (data.weather[0].main === "Mist" || data.weather[0].main === "Fog" || data.weather[0].main === "Haze") {
-                //     weatherIcon.src = "Image/mist.png";
-                // } else if (data.weather[0].main === "Rain") {
-                //     weatherIcon.src = "Image/rain.png";
-                // } else if (data.weather[0].main === "Snow") {
-                //     weatherIcon.src = "Image/snow.png";
-                // }
+                if (data.weather[0].main === "Clear") {
+                    weatherIcon.src = "Image/clear.png";
+                } else if (data.weather[0].main === "Clouds") {
+                    weatherIcon.src = "Image/clouds.png";
+                } else if (data.weather[0].main === "Drizzle") {
+                    weatherIcon.src = "Image/drizzle.png";
+                } else if (data.weather[0].main === "Mist" || data.weather[0].main === "Fog" || data.weather[0].main === "Haze") {
+                    weatherIcon.src = "Image/mist.png";
+                } else if (data.weather[0].main === "Rain") {
+                    weatherIcon.src = "Image/rain.png";
+                } else if (data.weather[0].main === "Snow") {
+                    weatherIcon.src = "Image/snow.png";
+                }
                 
             } catch (error) {
                 console.error("Error fetching weather data:", error);
